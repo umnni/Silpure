@@ -22,12 +22,12 @@ const popularLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#062f4f] text-white">
+    <footer className="bg-[var(--c-062f4f)] text-white">
       {/* NEWSLETTER */}
       <div className="border-b border-white/10">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-2 md:items-center lg:px-8">
           <div>
-            <p className="mb-2 text-[10px] uppercase tracking-[0.28em] text-[#9cc9da]">
+            <p className="mb-2 text-[10px] uppercase tracking-[0.28em] text-[var(--c-9cc9da)]">
               The Silpure Circle
             </p>
 
@@ -82,14 +82,14 @@ export default function Footer() {
             <div className="mt-6 flex gap-3">
               <a
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white hover:text-[#062f4f]"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white hover:text-[var(--c-062f4f)]"
               >
                 <FiInstagram />
               </a>
 
               <a
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white hover:text-[#062f4f]"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white hover:text-[var(--c-062f4f)]"
               >
                 <FiFacebook />
               </a>
@@ -179,7 +179,7 @@ export default function Footer() {
 
             <div className="space-y-4 text-sm text-white/55">
               <div className="flex gap-3">
-                <FiPhone className="mt-1 shrink-0 text-[#93c6d8]" />
+                <FiPhone className="mt-1 shrink-0 text-[var(--c-93c6d8)]" />
                 <span>
                   Customer Support
                   <br />
@@ -188,12 +188,12 @@ export default function Footer() {
               </div>
 
               <div className="flex gap-3">
-                <FiMail className="mt-1 shrink-0 text-[#93c6d8]" />
+                <FiMail className="mt-1 shrink-0 text-[var(--c-93c6d8)]" />
                 <span>support@silpure.in</span>
               </div>
 
               <div className="flex gap-3">
-                <FiMapPin className="mt-1 shrink-0 text-[#93c6d8]" />
+                <FiMapPin className="mt-1 shrink-0 text-[var(--c-93c6d8)]" />
                 <span>India</span>
               </div>
             </div>

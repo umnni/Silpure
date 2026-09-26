@@ -268,20 +268,20 @@ function SectionHeader({ eyebrow, title, text }) {
   return (
     <div className="mx-auto mb-9 max-w-2xl text-center">
       {eyebrow && (
-        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.27em] text-[#2c7a96]">
+        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.27em] text-[var(--c-2c7a96)]">
           {eyebrow}
         </p>
       )}
 
       <h2
-        className="text-[32px] font-normal leading-tight text-[#07324b] sm:text-[40px]"
+        className="text-[32px] font-normal leading-tight text-[var(--c-07324b)] sm:text-[40px]"
         style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
       >
         {title}
       </h2>
 
       {text && (
-        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-[#69828d]">
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-[var(--c-69828d)]">
           {text}
         </p>
       )}
@@ -292,14 +292,14 @@ function SectionHeader({ eyebrow, title, text }) {
 function ProductCard({ product }) {
   return (
     <div className="group min-w-[75%] sm:min-w-[44%] lg:min-w-0">
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#f3f7f8]">
+      <div className="relative aspect-[4/5] overflow-hidden bg-[var(--c-f3f7f8)]">
         {product.badge && (
-          <span className="absolute left-3 top-3 z-10 bg-white px-3 py-1.5 text-[8px] font-semibold tracking-[0.14em] text-[#083750] shadow-sm">
+          <span className="absolute left-3 top-3 z-10 bg-white px-3 py-1.5 text-[8px] font-semibold tracking-[0.14em] text-[var(--c-083750)] shadow-sm">
             {product.badge}
           </span>
         )}
 
-        <button className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-[#204a5c] shadow-sm transition hover:bg-[#063653] hover:text-white">
+        <button className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-[var(--c-204a5c)] shadow-sm transition hover:bg-[var(--c-063653)] hover:text-white">
           <FiHeart size={16} />
         </button>
 
@@ -312,7 +312,7 @@ function ProductCard({ product }) {
         </Link>
 
         <div className="absolute bottom-0 left-0 right-0 translate-y-full px-3 pb-3 transition duration-300 group-hover:translate-y-0">
-          <button className="w-full bg-[#063653] py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
+          <button className="w-full bg-[var(--c-063653)] py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
             Quick Add
           </button>
         </div>
@@ -321,16 +321,16 @@ function ProductCard({ product }) {
       <div className="pt-4 text-center">
         <Link
           to={`/product/${product.id}`}
-          className="text-sm font-medium text-[#183e50] transition hover:text-[#0b779d]"
+          className="text-sm font-medium text-[var(--c-183e50)] transition hover:text-[var(--c-0b779d)]"
         >
           {product.name}
         </Link>
 
         <div className="mt-2 flex items-center justify-center gap-2 text-sm">
-          <span className="font-semibold text-[#082f49]">{product.price}</span>
+          <span className="font-semibold text-[var(--c-082f49)]">{product.price}</span>
 
           {product.oldPrice && (
-            <span className="text-xs text-[#9aadb4] line-through">
+            <span className="text-xs text-[var(--c-9aadb4)] line-through">
               {product.oldPrice}
             </span>
           )}
@@ -367,7 +367,7 @@ export default function Home() {
 
       <main className="overflow-hidden bg-white">
         {/* HERO */}
-        <section className="relative min-h-[620px] overflow-hidden bg-[#dceef3] sm:min-h-[720px]">
+        <section className="relative min-h-[620px] overflow-hidden bg-[var(--c-dceef3)] sm:min-h-[720px]">
           {heroSlides.map((item, index) => (
             <div
               key={item.title}
@@ -383,7 +383,7 @@ export default function Home() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#032d47]/65 via-[#073954]/25 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[var(--c-032d47)]/65 via-[var(--c-073954)]/25 to-transparent" />
 
               <div className="relative mx-auto flex min-h-[620px] max-w-[1500px] items-center px-5 sm:min-h-[720px] sm:px-8 lg:px-14">
                 <div className="max-w-xl text-white">
@@ -406,7 +406,7 @@ export default function Home() {
 
                   <Link
                     to="/shop"
-                    className="mt-8 inline-flex items-center gap-3 bg-white px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.17em] text-[#073650] transition hover:bg-[#063653] hover:text-white"
+                    className="mt-8 inline-flex items-center gap-3 bg-white px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.17em] text-[var(--c-073650)] transition hover:bg-[var(--c-063653)] hover:text-white"
                   >
                     {item.button}
                     <FiArrowRight />
@@ -418,14 +418,14 @@ export default function Home() {
 
           <button
             onClick={previousSlide}
-            className="absolute left-4 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white hover:text-[#063653] sm:flex"
+            className="absolute left-4 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white hover:text-[var(--c-063653)] sm:flex"
           >
             <FiChevronLeft />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white hover:text-[#063653] sm:flex"
+            className="absolute right-4 top-1/2 z-30 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white hover:text-[var(--c-063653)] sm:flex"
           >
             <FiChevronRight />
           </button>
@@ -446,7 +446,7 @@ export default function Home() {
         </section>
 
         {/* PROMISE */}
-        <section className="border-b border-[#e1ecef] bg-[#f8fcfd]">
+        <section className="border-b border-[var(--c-e1ecef)] bg-[var(--c-f8fcfd)]">
           <div className="mx-auto grid max-w-[1500px] grid-cols-2 lg:grid-cols-5">
             {promises.map((item, index) => {
               const Icon = item.icon;
@@ -456,17 +456,17 @@ export default function Home() {
                   key={item.title}
                   className={`flex items-center gap-3 px-5 py-6 ${
                     index !== promises.length - 1
-                      ? "lg:border-r lg:border-[#deeaee]"
+                      ? "lg:border-r lg:border-[var(--c-deeaee)]"
                       : ""
                   }`}
                 >
-                  <Icon className="shrink-0 text-[#1b7a9b]" size={22} />
+                  <Icon className="shrink-0 text-[var(--c-1b7a9b)]" size={22} />
 
                   <div>
-                    <p className="text-[11px] font-semibold text-[#143b4d]">
+                    <p className="text-[11px] font-semibold text-[var(--c-143b4d)]">
                       {item.title}
                     </p>
-                    <p className="mt-1 text-[10px] text-[#8399a2]">
+                    <p className="mt-1 text-[10px] text-[var(--c-8399a2)]">
                       {item.text}
                     </p>
                   </div>
@@ -492,14 +492,14 @@ export default function Home() {
                   to="/shop"
                   className="group"
                 >
-                  <div className="relative aspect-[4/5] overflow-hidden bg-[#eef5f7]">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-[var(--c-eef5f7)]">
                     <img
                       src={category.image}
                       alt={category.title}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#052d44]/55 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--c-052d44)]/55 via-transparent to-transparent" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-center text-white">
                       <h3
@@ -523,7 +523,7 @@ export default function Home() {
         </section>
 
         {/* OCCASIONS */}
-        <section className="bg-[#f4f9fa] px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
+        <section className="bg-[var(--c-f4f9fa)] px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
           <div className="mx-auto max-w-[1450px]">
             <SectionHeader
               eyebrow="MADE FOR YOUR MOMENTS"
@@ -535,7 +535,7 @@ export default function Home() {
                 <Link
                   to="/shop"
                   key={occasion.title}
-                  className="group relative aspect-[4/5] overflow-hidden bg-[#dcecef]"
+                  className="group relative aspect-[4/5] overflow-hidden bg-[var(--c-dcecef)]"
                 >
                   <img
                     src={occasion.image}
@@ -543,7 +543,7 @@ export default function Home() {
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#032c46]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--c-032c46)]/70 via-transparent to-transparent" />
 
                   <div className="absolute bottom-0 p-6 text-white">
                     <h3
@@ -591,7 +591,7 @@ export default function Home() {
             <div className="mt-10 text-center">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-3 border-b border-[#123e53] pb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#123e53]"
+                className="inline-flex items-center gap-3 border-b border-[var(--c-123e53)] pb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--c-123e53)]"
               >
                 View All Jewellery
                 <FiArrowRight />
@@ -602,7 +602,7 @@ export default function Home() {
 
         {/* EDITORIAL BANNER */}
         <section className="grid lg:grid-cols-2">
-          <div className="relative min-h-[500px] overflow-hidden bg-[#dbeef2] lg:min-h-[680px]">
+          <div className="relative min-h-[500px] overflow-hidden bg-[var(--c-dbeef2)] lg:min-h-[680px]">
             <img
               src={ringImage}
               alt="Silpure signature collection"
@@ -610,9 +610,9 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex items-center bg-[#063653] px-7 py-16 text-white sm:px-14 lg:px-20">
+          <div className="flex items-center bg-[var(--c-063653)] px-7 py-16 text-white sm:px-14 lg:px-20">
             <div className="max-w-lg">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#9ed0df]">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--c-9ed0df)]">
                 THE SILPURE EDIT
               </p>
 
@@ -659,14 +659,14 @@ export default function Home() {
                   to="/shop"
                   className="group"
                 >
-                  <div className="relative aspect-[4/5] overflow-hidden bg-[#edf5f7]">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-[var(--c-edf5f7)]">
                     <img
                       src={gift.image}
                       alt={gift.title}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#032c46]/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--c-032c46)]/60 via-transparent to-transparent" />
 
                     <h3
                       className="absolute bottom-5 left-0 right-0 text-center text-xl text-white sm:text-3xl"
@@ -684,7 +684,7 @@ export default function Home() {
         </section>
 
         {/* REVIEWS */}
-        <section className="bg-[#eaf4f7] px-5 py-16 sm:py-20">
+        <section className="bg-[var(--c-eaf4f7)] px-5 py-16 sm:py-20">
           <div className="mx-auto max-w-6xl">
             <SectionHeader
               eyebrow="LOVED BY YOU"
@@ -697,12 +697,12 @@ export default function Home() {
                   key={review.name}
                   className="bg-white p-7 sm:p-8"
                 >
-                  <div className="mb-5 text-sm tracking-[0.1em] text-[#c4a461]">
+                  <div className="mb-5 text-sm tracking-[0.1em] text-[var(--c-c4a461)]">
                     ★★★★★
                   </div>
 
                   <p
-                    className="text-xl leading-8 text-[#244958]"
+                    className="text-xl leading-8 text-[var(--c-244958)]"
                     style={{
                       fontFamily: "Georgia, 'Times New Roman', serif",
                     }}
@@ -710,12 +710,12 @@ export default function Home() {
                     “{review.text}”
                   </p>
 
-                  <div className="mt-7 border-t border-[#e5edef] pt-5">
-                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#113e52]">
+                  <div className="mt-7 border-t border-[var(--c-e5edef)] pt-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--c-113e52)]">
                       {review.name}
                     </p>
 
-                    <p className="mt-1 text-[10px] text-[#8299a3]">
+                    <p className="mt-1 text-[10px] text-[var(--c-8299a3)]">
                       Verified Buyer
                     </p>
                   </div>
@@ -739,7 +739,7 @@ export default function Home() {
                 <Link
                   to="/shop"
                   key={price.title}
-                  className="group relative aspect-square overflow-hidden bg-[#e7f2f5]"
+                  className="group relative aspect-square overflow-hidden bg-[var(--c-e7f2f5)]"
                 >
                   <img
                     src={price.image}
@@ -747,7 +747,7 @@ export default function Home() {
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#032c46]/75 via-[#032c46]/5 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--c-032c46)]/75 via-[var(--c-032c46)]/5 to-transparent" />
 
                   <div className="absolute bottom-0 p-4 text-white sm:p-6">
                     <p className="text-[9px] uppercase tracking-[0.18em] text-white/70">
@@ -770,7 +770,7 @@ export default function Home() {
         </section>
 
         {/* FOR HER */}
-        <section className="bg-[#f7fbfc] px-4 py-16 sm:px-6 sm:py-24 lg:px-10">
+        <section className="bg-[var(--c-f7fbfc)] px-4 py-16 sm:px-6 sm:py-24 lg:px-10">
           <div className="mx-auto max-w-[1450px]">
             <SectionHeader
               eyebrow="JUST FOR HER"
@@ -784,7 +784,7 @@ export default function Home() {
                   key={item.title}
                   className="group"
                 >
-                  <div className="aspect-[4/5] overflow-hidden bg-[#e7f0f2]">
+                  <div className="aspect-[4/5] overflow-hidden bg-[var(--c-e7f0f2)]">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -794,7 +794,7 @@ export default function Home() {
 
                   <div className="mt-4 text-center">
                     <h3
-                      className="text-xl text-[#123e52]"
+                      className="text-xl text-[var(--c-123e52)]"
                       style={{
                         fontFamily: "Georgia, 'Times New Roman', serif",
                       }}
@@ -802,7 +802,7 @@ export default function Home() {
                       {item.title}
                     </h3>
 
-                    <span className="mt-2 inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#66838f]">
+                    <span className="mt-2 inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-[var(--c-66838f)]">
                       Shop Now
                       <FiArrowRight />
                     </span>
@@ -817,16 +817,16 @@ export default function Home() {
         <section className="py-16 sm:py-20">
           <div className="mb-9 px-5 text-center">
             <FiInstagram
-              className="mx-auto mb-4 text-[#176989]"
+              className="mx-auto mb-4 text-[var(--c-176989)]"
               size={22}
             />
 
-            <p className="text-[10px] uppercase tracking-[0.24em] text-[#42768b]">
+            <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--c-42768b)]">
               @silpure
             </p>
 
             <h2
-              className="mt-2 text-3xl text-[#07324b] sm:text-4xl"
+              className="mt-2 text-3xl text-[var(--c-07324b)] sm:text-4xl"
               style={{
                 fontFamily: "Georgia, 'Times New Roman', serif",
               }}
@@ -834,7 +834,7 @@ export default function Home() {
               Follow Our Journey
             </h2>
 
-            <p className="mt-3 text-sm text-[#748b95]">
+            <p className="mt-3 text-sm text-[var(--c-748b95)]">
               Real moments. Real stories. Real sparkle.
             </p>
           </div>
@@ -844,7 +844,7 @@ export default function Home() {
               <a
                 key={item}
                 href="#"
-                className="group relative aspect-square overflow-hidden bg-[#e9f2f4]"
+                className="group relative aspect-square overflow-hidden bg-[var(--c-e9f2f4)]"
               >
                 <img
                   src={ringImage}
@@ -852,7 +852,7 @@ export default function Home() {
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 flex items-center justify-center bg-[#063653]/0 transition duration-300 group-hover:bg-[#063653]/45">
+                <div className="absolute inset-0 flex items-center justify-center bg-[var(--c-063653)]/0 transition duration-300 group-hover:bg-[var(--c-063653)]/45">
                   <FiInstagram
                     className="scale-75 text-white opacity-0 transition duration-300 group-hover:scale-100 group-hover:opacity-100"
                     size={25}
